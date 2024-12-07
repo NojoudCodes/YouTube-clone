@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTube | YT clone</title>
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="src/assets/styles/index.css">
+    </head>
+    <body>
+        <!-- navbbar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="menu-icon">
+                    <button id="sidebar-toggle">
+                        <img src="src/assets/images/icons/menu.svg" alt="home icon" class="icon-img">
+                    </button>
+                    <div class="logo-img">
+                        <span class="location">sa</span>
+                        <img src="src/assets/images/icons/logo.svg" alt="logo" class="logo">
+                    </div>
+                </div>
+                <div class="search-form">
+                    <form class="form">
+                        <input type="search" name="search" id="search" placeholder="Search" class="search-input">
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </form>
+                    <div class="microphone-icon">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-video"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <button id="menu-toggle" class="account-avatar">
+                        <img src="src/assets/images/cat.jpg" alt="account avatar" class="account-img">
+                    </button>
+                </div>
+                <!-- hidden until clicked -->    
+                <div id="menu" class="nav-menu">
+                    <div class="account-info">
+                        <img src="src/assets/images/cat.jpg" alt="account avatar" class="account-img">
+                        <div class="account-details">
+                            <div>
+                                <p class="account-name">NojoudCodes</p>
+                                <p class="account-handler">@nojoudodes.23</p>
+                            </div>
+                            <a href="#" class="view-account">View your channel</a>
+                        </div>
+                    </div>
+                    <div class="break"></div>
+                    <div class="menu-nav">
+                        <div class="menu-item">
+                            <i class="fa-brands fa-google"></i>
+                            <a href="#" class="menu-link">Google Account</a>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-solid fa-user-group"></i>
+                            <div class="more">
+                                <a href="#" class="menu-link">Switch account</a>
+                                <i class="fa-solid fa-chevron-right" class="more-icon"></i>
+                            </div>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            <a href="#" class="menu-link">Sign out</a>
+                        </div><!--/. menu-item -->
+                        <div class="break"></div>
+                        <div class="menu-item">
+                            <i class="fa-brands fa-youtube"></i>
+                            <a href="#" class="menu-link">YouTube studio</a>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <a href="#" class="menu-link">Purchases and memberships</a>
+                        </div><!--/. menu-item -->
+                        <div class="break"></div>
+                        <div class="menu-item">
+                            <i class="fa-regular fa-id-badge"></i>
+                            <a href="#" class="menu-link">Your data in YouTube</a>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-regular fa-moon"></i>
+                            <div class="more">
+                                <a href="#" class="menu-link">Appearance: Light</a>
+                                <i class="fa-solid fa-chevron-right" class="more-icon"></i>
+                            </div>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-solid fa-language"></i>
+                            <div class="more">
+                                <a href="#" class="menu-link">Language: English</a>
+                                <i class="fa-solid fa-chevron-right" class="more-icon"></i>
+                            </div>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <div class="more">
+                                <a href="#" class="menu-link">Restricted Mode: Off</a>
+                                <i class="fa-solid fa-chevron-right" class="more-icon"></i>
+                            </div>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-solid fa-globe"></i>
+                            <div class="more">
+                                <a href="#" class="menu-link">Location: Saudi Arabia</a>
+                                <i class="fa-solid fa-chevron-right" class="more-icon"></i>
+                            </div>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-regular fa-keyboard"></i>
+                            <a href="#" class="menu-link">Keyboard shortcuts</a>
+                        </div><!--/. menu-item -->
+                        <div class="break"></div>
+                        <div class="menu-item">
+                            <i class="fa-solid fa-gear"></i>
+                            <a href="#" class="menu-link">Settings</a>
+                        </div><!--/. menu-item -->
+                        <div class="break"></div>
+                        <div class="menu-item">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <a href="#" class="menu-link">Help</a>
+                        </div><!--/. menu-item -->
+                        <div class="menu-item">
+                            <i class="fa-solid fa-info"></i>
+                            <a href="#" class="menu-link">Send feedback</a>
+                        </div><!--/. menu-item -->
+                    </div>
+                </div>
+            </div>
+        </nav> <!-- /.navbbar -->
+
+        <!-- main -->
+        <main class="main-content">
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    <div class="sidebar-links active">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/home.svg" alt="home icon" class="icon-img">
+                            <p class="sidebar-nav-link">Home</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/shorts.svg" alt="shorts icon" class="icon-img">
+                            <p class="sidebar-nav-link">Shorts</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/subscribe.svg" alt="subscribe icon" class="icon-img">
+                            <p class="sidebar-nav-link">Subscriptions</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="break"></div>
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <p class="sidebar-nav-link">You</p>
+                            <img src="src/assets/images/icons/arrow-right.svg" alt="arrow-right icon" class="icon-img">
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/later.svg" alt="history icon" class="icon-img">
+                            <p class="sidebar-nav-link">History</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/playlist.svg" alt="playlist icon" class="icon-img">
+                            <p class="sidebar-nav-link">Playlists</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/videos.svg" alt="videos icon" class="icon-img">
+                            <p class="sidebar-nav-link">Your videos</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/watch-later.svg" alt="watch later icon" class="icon-img">
+                            <p class="sidebar-nav-link">Watch later</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/like.svg" alt="like icon" class="icon-img">
+                            <p class="sidebar-nav-link">Liked videos</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="break"></div>
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <p class="sidebar-nav-link">Subscriptions</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/cat.jpg" alt="channel img" class="subscribed-channel-img">
+                            <p class="sidebar-nav-link">NojoudCodes</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/cat.jpg" alt="channel img" class="subscribed-channel-img">
+                            <p class="sidebar-nav-link">NojoudCodes</p>
+                            <img src="src/assets/images/icons/live-now.svg" alt="live icon" class="small-icon-img">
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/cat.jpg" alt="channel img" class="subscribed-channel-img">
+                            <p class="sidebar-nav-link">NojoudCodes</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/arrow-down.svg" alt="arrow down img" class="icon-img">
+                            <p class="sidebar-nav-link">Show more</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="break"></div>
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <p class="sidebar-nav-link">Explore</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/trending.svg" alt="trending icon" class="icon-img">
+                            <p class="sidebar-nav-link">Trending</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/music.svg" alt="music icon" class="icon-img">
+                            <p class="sidebar-nav-link">Music</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/live.svg" alt="live icon" class="icon-img">
+                            <p class="sidebar-nav-link">Live</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/gaming.svg" alt="gaming icon" class="icon-img">
+                            <p class="sidebar-nav-link">Gaming</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/sports.svg" alt="sports icon" class="icon-img">
+                            <p class="sidebar-nav-link">Sports</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="break"></div>
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <p class="sidebar-nav-link">More from YouTube</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/yt-premuim.svg" alt="yt-premuim icon" class="icon-img">
+                            <p class="sidebar-nav-link">YouTube Premium</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/yt-studio.svg" alt="yt-studio icon" class="icon-img">
+                            <p class="sidebar-nav-link">YouTube Studio</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/yt-music.svg" alt="yt-music icon" class="icon-img">
+                            <p class="sidebar-nav-link">YouTube Music</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/yt-kids.svg" alt="yt-kids icon" class="icon-img">
+                            <p class="sidebar-nav-link">YouTube Kids</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="break"></div>
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/settings.svg" alt="settings icon" class="icon-img">
+                            <p class="sidebar-nav-link">Settings</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/history.svg" alt="history icon" class="icon-img">
+                            <p class="sidebar-nav-link">Report history</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/help.svg" alt="help icon" class="icon-img">
+                            <p class="sidebar-nav-link">Help</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links">
+                        <div class="sidebar-link">
+                            <img src="src/assets/images/icons/feedback.svg" alt="feedback icon" class="icon-img">
+                            <p class="sidebar-nav-link">Send feedback</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="break"></div>
+                    <div class="links">
+                        <div class="link-group">
+                            <a href="#">About</a>
+                            <a href="#">Press</a>
+                            <a href="#">Copyright</a>
+                            <a href="#">Contact us</a>
+                            <a href="#">Creators</a>
+                            <a href="#">Advertise</a>
+                            <a href="#">Developers</a>
+                        </div>
+                        <div class="link-group">
+                            <a href="#">Terms</a>
+                            <a href="#">Privacy</a>
+                            <a href="#">Policy & Safety</a>
+                            <a href="#">How YouTube works</a>
+                            <a href="#">Test new features</a>
+                        </div>
+                        <p class="conpyrights"> © 2024 Google LLC</p>
+                    </div>
+                </div>
+            </div><!-- /.sidebar -->
+            <!-- sidebar toggle -->
+            <div class="sidebar-toggle">
+                <div class="sidebar-menu-toggle">
+                    <div class="sidebar-links-toggle">
+                        <div class="sidebar-link-toggle">
+                            <img src="src/assets/images/icons/home.svg" alt="home icon" class="icon-img">
+                            <p class="sidebar-nav-link-toggle">Home</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links-toggle">
+                        <div class="sidebar-link-toggle">
+                            <img src="src/assets/images/icons/shorts.svg" alt="shorts icon" class="icon-img">
+                            <p class="sidebar-nav-link-toggle">Shorts</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links-toggle">
+                        <div class="sidebar-link-toggle">
+                            <img src="src/assets/images/icons/subscribe.svg" alt="subscribe icon" class="icon-img">
+                            <p class="sidebar-nav-link-toggle">Subscriptions</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                    <div class="sidebar-links-toggle">
+                        <div class="sidebar-link-toggle">
+                            <img src="src/assets/images/icons/you.svg" alt="you icon" class="icon-img">
+                            <p class="sidebar-nav-link-toggle">You</p>
+                        </div>
+                    </div><!-- /.sidebar-links -->
+                </div>
+            </div>
+            <div class="content">
+                <div class="carousel">
+                    <button class="next-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-items">
+                        <div class="carousel-item active">All</div>
+                        <div class="carousel-item">Frontend Developer</div>
+                        <div class="carousel-item">HTML</div>
+                        <div class="carousel-item">CSS</div>
+                        <div class="carousel-item">JavaScript</div>
+                        <div class="carousel-item">Tailwind css</div>
+                        <div class="carousel-item">ReactJS</div>
+                        <div class="carousel-item">Web Development</div>
+                        <div class="carousel-item">Web Development</div>
+                        <div class="carousel-item">HTML</div>
+                        <div class="carousel-item">CSS</div>
+                        <div class="carousel-item">JavaScript</div>
+                        <div class="carousel-item">Tailwind css</div>
+                        <div class="carousel-item">ReactJS</div>
+                        <div class="carousel-item">Web Development</div>
+                    </div>
+                    <button class="prev-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="yt-videos">
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                    <div class="yt-video">
+                        <div class="video-container">
+                            <img src="src/assets/images/01.avif" alt="channel image">
+                        </div>
+                        <div class="video-details">
+                            <div class="channel-img-container">
+                                <img src="src/assets/images/cat.jpg" alt="channel image" class="channel-img">
+                            </div>
+                            <div class="channel-name">
+                                <div class="video-info">
+                                    <div class="yt-name">
+                                        <p>Best Cat Videos of the Decade</p>
+                                        <img src="src/assets/images/icons/dots.svg" alt="dots" class="icon-img">
+                                    </div>
+                                    <div class="views">
+                                        <p class="yt-channel-name">Daily Dose Of Internet</p>
+                                        <p class="channel-view">58M views • 4 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- video-->
+                </div><!-- videos -->   
+            </div>
+        </main><!-- /.main -->
+
+        <!-- scripts -->
+        <script src="src/index.js"></script>
+    </body>
+</html>
