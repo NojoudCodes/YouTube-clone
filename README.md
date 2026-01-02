@@ -13,8 +13,8 @@ Note: This is a pure UI clone and does not include backend functionality, video 
 <ul> 
   <li>Frontend: HTML, CSS</li>
   <li>Styling: Tailwind CSS</li>
+  <li>Icons: Font Awesome </li>
 </ul>
-Icons: (Mention your icon library, e.g., Heroicons)
 
 ## Getting Started
 The project consists primarily of static HTML/CSS files. You can view the output directly in a browser or set up a local build process if you utilized a Tailwind CLI/PostCSS setup.
